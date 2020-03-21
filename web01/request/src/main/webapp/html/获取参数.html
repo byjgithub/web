@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取参数</title>
+</head>
+<body>
+<h1>测试请求参数</h1>
+<a href="/request/A02Servlet?xxx=XXX&yyy=YYY">获取超链接请求参数</a>
+<hr>
+<h1>获取表单请求参数</h1>
+<!-- action="/项目名/Servlet路径";-->
+<form action="/request/A02Servlet" method="get">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    愛好：<input type="checkbox" name="hobby" value="eat">吃&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="checkbox" name="hobby" value="sleep">睡&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="checkbox" name="hobby" value="work">工作&nbsp;&nbsp;&nbsp;&nbsp;<br>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
