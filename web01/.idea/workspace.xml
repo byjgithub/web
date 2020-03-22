@@ -12,18 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8358038-4b69-4348-afe2-39444a74dee9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/JSP/src/main/java/com/itcast/service/AddOperaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/src/main/java/com/itcast/service/AddOperaServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/src/main/webapp/jsp/addOperation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/src/main/webapp/jsp/addOperation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/src/main/webapp/jsp/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/src/main/webapp/jsp/result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/target/JSP/WEB-INF/classes/com/itcast/service/AddOperaServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/target/JSP/WEB-INF/classes/com/itcast/service/AddOperaServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/target/JSP/jsp/addOperation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/target/JSP/jsp/addOperation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/target/JSP/jsp/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/target/JSP/jsp/result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/target/classes/com/itcast/service/AddOperaServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/target/classes/com/itcast/service/AddOperaServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cookies/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/request/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/request/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/request/target/" />
     <ignored path="$PROJECT_DIR$/JSP/target/" />
+    <ignored path="$PROJECT_DIR$/cookie1/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +39,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cookie1/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="42" column="19" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="42" selection-end-column="19" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -97,7 +98,6 @@
         <option value="$PROJECT_DIR$/request/src/main/java/service/pathservlet/DServlet.java" />
         <option value="$PROJECT_DIR$/request/src/main/java/service/servlet01/ServletContextTest.java" />
         <option value="$PROJECT_DIR$/request/src/main/java/service/resources/classLoader.txt" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/request/src/test/java/Aaa.java" />
         <option value="$PROJECT_DIR$/request/src/main/java/service/pathservlet/ClassLoaderPath.java" />
         <option value="$PROJECT_DIR$/JSP/pom.xml" />
@@ -106,6 +106,11 @@
         <option value="$PROJECT_DIR$/JSP/src/main/java/com/itcast/service/AddOperaServlet.java" />
         <option value="$PROJECT_DIR$/JSP/src/main/webapp/jsp/result.jsp" />
         <option value="$PROJECT_DIR$/JSP/src/main/webapp/jsp/addOperation.jsp" />
+        <option value="$PROJECT_DIR$/cookie1/pom.xml" />
+        <option value="$PROJECT_DIR$/cookie1/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/request/src/main/webapp/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -171,7 +176,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -194,6 +199,102 @@
               <item name="web01" type="b2602c69:ProjectViewProjectNode" />
               <item name="web01" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="JSP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="JSP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="JSP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="JSP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="JSP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="request" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="request" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="request" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="request" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="request" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -206,7 +307,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cookie1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cookie1/src/main/webapp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -215,7 +316,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
@@ -225,17 +326,18 @@
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\deveKit\IDEA\IdeaProjects\web01\cookie1" />
+      <recent name="E:\deveKit\IDEA\IdeaProjects\web01\request\src\main\java\service\include" />
+      <recent name="E:\deveKit\IDEA\IdeaProjects\web01\request\src\main\webapp\html" />
+      <recent name="E:\deveKit\IDEA\IdeaProjects\web01\request\src\main\webapp\video" />
+      <recent name="E:\deveKit\IDEA\IdeaProjects\web01\request\src\main\webapp\WEB-INF\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\deveKit\IDEA\IdeaProjects\web01\request\src\main\resources\resources" />
       <recent name="E:\deveKit\IDEA\IdeaProjects\web01\request\src\main\resources" />
       <recent name="E:\deveKit\IDEA\IdeaProjects\web01\request\src\main\webapp" />
       <recent name="E:\deveKit\IDEA\IdeaProjects\web01\request\src\main\webapp\WEB-INF" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\deveKit\IDEA\IdeaProjects\web01\request\src\main\java\service\include" />
-      <recent name="E:\deveKit\IDEA\IdeaProjects\web01\request\src\main\webapp\html" />
-      <recent name="E:\deveKit\IDEA\IdeaProjects\web01\request\src\main\webapp\video" />
-      <recent name="E:\deveKit\IDEA\IdeaProjects\web01\request\src\main\webapp\WEB-INF\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -256,6 +358,11 @@
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
+        <file path="%IDEA_RUN:TOMCAT_HOME%/webapps/ROOT">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ROOT" />
+          </settings>
+        </file>
         <artifact name="JSP:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/JSP" />
@@ -271,11 +378,6 @@
             <option name="CONTEXT_PATH" value="/web01" />
           </settings>
         </artifact>
-        <file path="%IDEA_RUN:TOMCAT_HOME%/webapps/ROOT">
-          <settings>
-            <option name="CONTEXT_PATH" value="/ROOT" />
-          </settings>
-        </file>
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_web01_2" />
@@ -459,7 +561,7 @@
       <workItem from="1584627748148" duration="16946000" />
       <workItem from="1584721864674" duration="4060000" />
       <workItem from="1584774808677" duration="2706000" />
-      <workItem from="1584785941192" duration="1600000" />
+      <workItem from="1584785941192" duration="3310000" />
     </task>
     <servers />
   </component>
@@ -481,23 +583,24 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54617000" />
+    <option name="totallyTimeSpent" value="56327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8575419" visible="true" weight="0.23903178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7935154" visible="true" weight="0.23903178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.1424581" side_tool="true" visible="true" weight="0.23903178" />
+      <window_info id="Web" order="7" sideWeight="0.20648465" side_tool="true" visible="true" weight="0.23903178" />
       <window_info id="JRebel" order="8" sideWeight="0.23540147" side_tool="true" weight="0.15279879" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32935154" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.051194537" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.31740615" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -513,7 +616,7 @@
       <window_info anchor="bottom" id="Inspection Results" order="15" sideWeight="0.49924356" weight="0.32935154" />
       <window_info anchor="bottom" id="JRebel Console" order="16" sideWeight="0.5015129" side_tool="true" weight="0.40784982" />
       <window_info anchor="bottom" id="Problems" order="17" />
-      <window_info anchor="bottom" id="JRebel Executor" order="18" sideWeight="0.49848714" visible="true" weight="0.3890785" />
+      <window_info anchor="bottom" id="JRebel Executor" order="18" sideWeight="0.49848714" weight="0.3890785" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -722,25 +825,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JSP/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JSP/src/main/webapp/jsp/addOper.xhtml" />
     <entry file="file://$PROJECT_DIR$/request/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -765,8 +854,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cookie1/pom.xml">
+    <entry file="file://$PROJECT_DIR$/cookie1/src/main/java/com/itcast/service/AddOperaServlet.java">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookie1/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookie1/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JSP/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="42" column="19" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="42" selection-end-column="19" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
@@ -785,11 +916,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>request:war</last-edited>
+          <last-edited>web01:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -797,7 +929,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web (web01)|Web</last-edited>
+          <last-edited>Web (cookie1)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
