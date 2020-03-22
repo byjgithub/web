@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>使用对象访问方式遍历</title>
+		<script type="text/javascript" src="../../../js/jquery-1.8.3.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				// 全选和全不选事件
+				$("#checkallbox").click(function() {
+					var isChecked = this.checked; //被选中的状态，返回true或false
+					// 属性选择器    使用对象访问的方式进行遍历，语法$(选择器).each(function(){  });
+					$("input[name=hobby]").each(function() {
+						this.checked = isChecked; //将选择按钮的状态赋值给各个选项
+					});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		请选择您的爱好<br/>
+		<input type="checkbox" id="checkallbox" /> 全选/全不选 <br/>
+		<input type="checkbox" name="hobby" value="足球" /> 足球
+		<input type="checkbox" name="hobby" value="篮球" /> 篮球
+		<input type="checkbox" name="hobby" value="游泳" /> 游泳
+		<input type="checkbox" name="hobby" value="唱歌" /> 唱歌 <br/>
+	</body>
+
+</html>

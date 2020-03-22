@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../../../js/jquery-1.8.3.js"></script>
+		<!--<script>
+			// js方式
+			function write1() {
+				document.getElementById("div1").innerHTML = "感觉自己萌萌哒...";
+			}
+
+			// jquery方式
+			$(function() {
+				$("#btn1").click(function() {
+					// jq对象不能操作js里面的属性和方法
+					//$("#div1").innerHTML="感觉对你呵呵哒...";
+					$("#div1").html("感觉对你呵呵哒...")
+				});
+			});
+		</script>-->
+
+		<script>
+			$(function() {
+				// jq动态绑定事件
+				$("#btn2").click(function() {
+					// jq对象转js对象，并操作js的属性
+					$("#div1").get(0).innerHTML = "美美哒!!!";
+				});
+			});
+
+			$(function() {
+				$("#btn1").click(function() {
+					var jsObj = document.getElementById("div1"); //js对象
+					$(jsObj).html("壮壮哒!!!"); //js对象转jq对象，并操作jq对象的方法和属性
+				});
+			});
+		</script>
+
+	</head>
+
+	<body>
+		<!--<input type="button" value="JS写入" onclick="write1()" />-->
+		<input type="button" value="JS写入" id="btn2" />
+		<input type="button" value="JQ写入" id="btn1" />
+		<div id="div1">
+			班长说：
+			<font size="3" color="red">你好帅！！！</font>
+		</div>
+
+	</body>
+
+</html>

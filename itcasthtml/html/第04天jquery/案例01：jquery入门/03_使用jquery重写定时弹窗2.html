@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<style>
+			#father {
+				border: 0px solid red;
+				width: 1300px;
+				height: 2170px;
+				margin: auto;
+			}
+			
+			#bottom {
+				text-align: center;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+		</style>
+
+		<script type="text/javascript" src="../../../js/jquery-1.8.3.js"></script>
+		<script>
+			// 书写弹出广告窗口函数
+			$(function() {
+				// 1、获取图片并显示
+				time = setTimeout(showAd, 1000); //1秒后显示图片
+			});
+			// 书写显示广告的函数
+			function showAd() {
+				// 获取广告图片对象
+				//$("#img2").show(); //显示图片
+				$("#img2").show(3000); //缓慢的在三秒内显示图片
+				// 清除显示图片的定时操作
+				clearTimeout(time);
+				timeout = setTimeout(showFont, 2000); // 3秒后显示倒计时文字，
+
+			}
+
+			// 隐藏图片的操作
+			function hiddenAd() {
+				// 获取广告图片并让其隐藏
+				//$("#img2").hide();//隐藏图片
+				$("#img2").hide(3000); //缓慢的在三秒内隐藏图片
+				// 清除隐藏图片的定时操作
+				clearTimeout(time);
+			}
+
+			function showFont() {
+				$("#div2").show();
+				timeval = setInterval(countDown, 1000); // 显示图片后倒计时五秒
+			}
+
+			function countDown() {
+				// 获取倒计时数字
+				var time = $("#time1").get(0).innerText;
+				var timedown = parseInt(time);
+				$("#time1").html(timedown - 1);
+				if(timedown == 1) {
+					$("#div2").hide();
+					clearTimeout(timeout);
+					clearInterval(timeval);
+					// 设置隐藏图片的定时操作
+					time = setTimeout(hiddenAd, 0); //五秒后关闭图片
+				}
+
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<div id="father">
+			<!--定时弹出广告图片位置-->
+			<div id="div2" style="font-size: 25px;color: red;display: none;" align="center">
+				倒计时：
+				<font id="time1">5</font><br />
+
+			</div>
+			<div id="div3" align="center">
+				<img src="../../../img/乄小呆/乄小呆  (0).png" width="100%" style="display: none;width: 800px;height: 500px;" id="img2" />
+			</div>
+			<!--8.友情链接和版权信息-->
+			<div id="bottom">
+				<a href="#">关于我们</a>
+				<a href="#">联系我们</a>
+				<a href="#">招贤纳士</a>
+				<a href="#">法律声明</a>
+				<a href="#">友情链接</a>
+				<a href="#">支付方式</a>
+				<a href="#">配送方式</a>
+				<a href="#">服务声明</a>
+				<a href="#">广告声明</a>
+				<p>
+					Copyright © 2005-2016 传智商城 版权所有
+				</p>
+			</div>
+		</div>
+	</body>
+
+</html>

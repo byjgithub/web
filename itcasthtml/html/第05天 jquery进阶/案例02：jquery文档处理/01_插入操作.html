@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<!--
+	内部插入
+ 		1. A.append(B):内部结尾处，将B追加到A里面去
+ 		2. A.prepend(B):内部开始处，将B追加到A里面去
+		3. A.appendTo(B):内部结尾处，将A追加到B里面去
+		4. A.prependTo(B):内部开始处，将B追加到A里面去
+	外部插入
+		1. A.after(B):外部，将B追加到A后面
+		2. A.Before(B):外部，将A追加到B前面
+		3. A.insertAfter(B):外部，将A追加到B后面
+		4. A.insertBefore(B)::外部，将A追加到B前面
+-->
+
+	<head>
+		<meta charset="UTF-8">
+		<title>01_插入操作</title>
+		<script type="text/javascript" src="../../../js/jquery-1.8.3.js"></script>
+		<script type="text/javascript">
+			// 需求：在id=edu下增加<option value="大专">大专</option> 
+			$(function() {
+				$("#btn").click(function(){
+					var $newNode = $("<option value='大专'>大专</option>");
+					// 内部插入
+					//$("#edu").append($newNode);//内部插入，B插入到A尾部
+					//$("#edu").prepend($newNode);//内部插入，B插入到A首部
+					//外部插入
+					//$("option[value='本科']").after($newNode);//外部插入，B插入到A的后边
+				
+					//$newNode.insertBefore($("option:contains('硕士')"));
+					$("option:contains('高中')").before($newNode);//外部插入，B插入到A前边
+					
+				});
+			});
+		</script>
+	</head>
+
+	<Body>
+		<select id="edu">
+			<option value="博士">博士</option>
+			<option value="硕士">硕士</option>
+			<option value="本科">本科</option>
+			<option value="高中">高中</option>
+		</select>
+		<button id="btn">添加</button>
+	</Body>
+
+</html>

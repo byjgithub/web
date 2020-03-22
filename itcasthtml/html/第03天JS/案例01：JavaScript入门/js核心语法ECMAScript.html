@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<!--
+1、JavaScript的组成：
+	1.ECMAScript：JavaScript的核心内容，包含（基本语法、变量、关键字、保留字、数据类型、语句、函数）
+	2.DOM：文档对象模型，包含整个HTML页面的内容
+	3.BOM:浏览器对象模型，包含整个浏览器相关的内容
+
+
+2、JavaScript的引入方式
+	1.内嵌式：与css相同，在html页面的head中，使用script标签引用JavaScript语法
+		<script type="text/javascript">
+			javaScript代码
+		</script>
+		
+	2.外联式：将js代码放在以.js为后缀的文件中，在html界面，在head 的<script>标签中，用src引入	
+		<script src="../../../js/javascript入门.js" 
+			type="text/javascript" charset="utf-8">
+		</script>
+	
+3、ECMAScript基本语法
+	1.变量声明：
+		(1)变量名称区分大小写（对大小写敏感）
+		(2)变量名称必须以字母、下划线(_)、美元符号($)开头，可以用任意个 数字、字符、下划线、美元符号组成，
+		但不能包含空格等符号，不能是js的关键字
+		(3)关键字：var
+	2.变量的声明：
+		var 变量名;//javaScript的变量名可以不声明，直接使用。默认值 undefined
+	3.变量的赋值：
+			var 变量名 = 值;
+		或
+			var 变量名2;
+			变量名2 = 值;
+4、JavaScript的基本数据类型
+	1.Undefined：它的值只有一个，那就是undefined，当声明变量但并未赋值时，变量的默认值就是undefined。
+	2.Null：它只有一个专用值null，表示空，一个占位符。js将null与undefined定义为相等。
+	3.Boolean：有true和false两个值
+	4.Number：表示数字
+	5.String：字符串由双引号""和单引号''声明，JavaScript没有字符类型
+	6.Object：对象类型或Null类型
+		(1)引用类型通常叫做类，也就是说，遇到引用类型，所处理的就是对象。
+		(2)JavaScript是基于对象的而不是面向对象，对象类型的默认值是null。
+		(3)JavaScript提供众多预定义引用类型（内置对象）。
+		
+5、运算符
+	JavaScript的运算符与java运算符基本一致，只有个别需要注意：
+	1. /（除号）：JavaScript中除号是除以的意思，而java中是取商的意思。
+	2.===(全等于)：JavaScript中三个等号是全等于的意思，值和数据类型全都一致返回true，否则为false。java中不存在全等于符号。
+	3.== 在做比较时会做自动转换，比较的是两个变量的值。===在做比较时不会做自动转换，比较的是两个变量的值和类型。
+
+
+6、判断语句(if)
+	if(判断条件){
+		条件成立时执行的代码
+	}else{
+		条件不成立时执行的代码
+	}
+
+7、函数
+	1.语法格式：
+		(1)声明函数
+			function 函数名(){
+				函数代码;
+			}
+		(2)匿名函数
+			var aa = function(){
+				alert("匿名函数")
+			}
+			aa();//调用匿名函数
+	2.说明
+		(1)function 是定义函数的关键字
+		(2)函数名：你为函数取的名字，即java中的方法名
+		(3)函数代码：你要完成功能实现的代码。
+	3.函数的调用：
+		函数写完后是不会自动执行的，需要触发函数。与java中调用方法类似。
+
+8、常用的互动方法
+	1.document.write("向html输出的内容");
+	向HTML页面输出内容的几种方式：
+		(1)输出内容用""括起，直接输出""号内的内容:
+			document.write("I love JavaScript！");
+		(2)通过变量输出内容：
+			var mystr="hello world!";
+			document.write(mystr);  
+		(3)输出多项内容，内容之间用+号连接:
+			var mystr="hello";
+			document.write(mystr+"I love JavaScript");
+		(4)输出HTML标签，并起作用，标签使用""括起来:
+			var mystr="hello";
+			document.write(mystr+"<br>");
+	2.alter("警告框");
+		执行到alter代码时，页面会弹出一条警告信息:
+		var mynum = 30;
+		alert("hello!");
+		alert(mynum);
+	3.confirm(str):
+		(1)str:在消息对话框中显示的内容。
+		(2)返回值：Boolean值，通过返回值可以判断用户点击了什么按钮。
+			当用户点击"确定"按钮时，返回true
+			当用户点击"取消"按钮时，返回false
+		(3)示例：
+			var mymessage=confirm("你喜欢JavaScript吗?");
+		    if(mymessage==true){   
+		    	document.write("很好,加油!");
+		    }
+		    else{  document.write("JS功能强大，要学习噢!");
+		    }
+	4.prompt消息对话框
+		(1)弹出消息对话框,通常用于询问一些需要与用户交互的信息。弹出消息对话框（包含一个确定按钮、取消按钮与一个文本输入框）。
+		(2)语法：prompt(str1, str2);
+			1) str1:要显示在消息对话框中的文本，不可更改（向用户发出的询问）
+			2) str2：文本框中的内容，可以修改（需要用户输入的信息）
+			3) 返回值：
+					确认：点击确认按钮，文本框中的内容将作为函数的返回值
+					取消：将返回null
+		(3)示例：
+	 		var myname=prompt("请输入你的姓名:");
+			if(myname!=null)
+			  {   alert("你好"+myname); }
+			else
+			  {  alert("你好 my friend.");  }
+
+	5.打开新窗口window.open();
+		(1)语法：window.open(url,窗口名称，参数字符串)
+		(2)参数说明
+			1) url:可选参数，新窗口要打开的网页的网址或路径。如果为空或省略参数，则新窗口不打开任何文档。
+			2) 窗口名称：
+				a) 由字母、数字、下划线组成。
+				b) _top、_blank、_self 具有特殊意义的名称。
+					_self：默认值，在当前窗口显示目标网页
+					_blank：在新窗口显示目标网页
+					_top：框架网页中在上部窗口中显示目标网页
+				c) 相同 name的窗口只能创建一个，想要创建多个窗口则name不能相同。
+				d) name不能包含空格
+			3) 参数字符串：可选参数，用于设置窗口的参数，多个参数之间用英文逗号隔开。
+		(3)参数表
+			参数			     值					说明
+			top			Number		窗口顶部离开屏幕顶部的像素数
+			left		Number		窗口左端离开屏幕左端的像素数
+			width		Number			        窗口的宽度
+			height		Number			        窗口的高度
+			menubar		yes,no			窗口有没有菜单
+			toolbar		yes,no			窗口有没有工具条
+			scrollbars	yes,no			窗口有没有滚动条
+			status		yes,no			窗口有没有状态栏
+		(4)示例
+		window.open('http://www.imooc.com','_blank',
+		'width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes');
+		
+ 	6.关闭窗口
+ 		(1)语法
+ 			window.close();   //关闭本窗口
+ 			<窗口对象>.close();  //关闭指定的窗口
+ 		(2)示例
+ 			var mywin=window.open('http://www.imooc.com'); //将新打的窗口对象，存储在变量mywin中
+   			mywin.close();
+ 	
+9、练习：制作新按钮，“新窗口打开网站” ，点击打开新窗口。
+ 		需求：
+ 			1.新窗口打开时弹出确认框，是否打开
+ 			2、通过输入对话框，确定打开的网址，默认为 http：//www.imooc.com/
+ 			3、打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。
+
+-->
+
+	<body>
+	</body>
+
+</html>

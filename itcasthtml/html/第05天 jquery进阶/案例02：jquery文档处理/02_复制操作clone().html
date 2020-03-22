@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>复制操作</title>
+		<script type="text/javascript" src="../../../js/jquery-1.8.3.js"></script>
+		<script type="text/javascript">
+			// 点击喜欢的水果，然后复制这行代码，加入到最后一行
+			// clone() 克隆匹配的Dom元素，并且选中克隆的副本
+			// clone(true) 克隆匹配的dom元素，并且选中克隆的副本 这些副本具有真身一样的事件处理能力
+			$(function() {
+				$("ul li").click(function() {
+					$(this).clone(true).appendTo("ul");
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<p title="选择你最喜欢的水果.">你最喜欢的水果是?</p>
+		<ul>
+			<li title='苹果'>苹果</li>
+			<li title='橘子'>橘子</li>
+			<li title='菠萝'>菠萝</li>
+		</ul>
+	</body>
+
+</html>

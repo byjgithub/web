@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>内置对象实战练习</title>
+		<!--
+	某班的成绩出来了，现在老师要把班级的成绩打印出来。
+	效果图:XXXX年XX月X日 星期X--班级总分为:81
+
+	格式要求：
+		1、显示打印的日期。 格式为类似“XXXX年XX月XX日 星期X” 的当前的时间。
+		2、计算出该班级的平均分（保留整数）。
+		同学成绩数据如下：
+			"小明:87; 小花:81; 小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76"
+-->
+
+		<script type="text/javascript">
+			var strScore = "小明:87; 小花:81; 小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+			//按;将字符串切割成数组
+			var arrs = strScore.split(";"); //成绩数组
+			var doubleArrs = new Array();
+			var i = 0; //记录班级人数
+			var sum = 0; //记录班级总成绩
+			while(i < arrs.length) {
+				doubleArrs = arrs[i].split(":");
+				sum += parseInt(doubleArrs[1]);
+				i++;
+			}
+
+			var date = new Date();
+			var week = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+			var year = date.getFullYear(); //年
+			var month = date.getMonth() + 1; //月
+			var day = date.getDate(); //日
+			var weekDay = week[date.getDay()]; //星期几
+			document.write(year + "年" + month + "月" + day + "日 " + weekDay + " ---- ");
+			document.write("班级总成绩是：" + sum + ";平均成绩是：" + (sum / i));
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

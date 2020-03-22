@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<!--
+	id选择器：$("#id")
+	类选择器：$(".class")
+	元素选择器：$("div")
+	组合选择器：$("#id,.class,div") 多个选择器使用逗号隔开，将所有选中的选择器加入到一个结果中。也就是  result = #id||.class||div 
+	层级选择器：$("#id .class div") 多个选择器使用空格隔开，从第一个选择器开始，一次区下级寻找后边选择器选中的内容。
+		也就是 在#id 下寻找 .class选择器，再在.class选择器中寻找 div元素选择器。
+-->
+
+	<head>
+		<meta charset="UTF-8">
+		<title>基本选择器</title>
+		<link rel="stylesheet" href="../../../css/style.css" />
+		<script type="text/javascript" src="../../../js/jquery-1.8.3.js"></script>
+		<!-- 基本选择器 -->
+		<script>
+			// jquery的函数
+			$(function() {
+				//id选择器
+				$("#btnn1").click(function() {
+					// jquery的选择器及添加css效果
+					$("#one").css("background-color", "pink");
+				});
+
+				// 类选择器
+				$("#btnn2").click(function() {
+					$(".mini").css("background-color", "red");
+				});
+
+				// 元素(标签)选择器
+				$("#btnn3").click(function() {
+					$("div").css("background-color", "green");
+				});
+
+				// *表示选中所有元素
+				$("#btnn4").click(function() {
+					$("*").css("background-color", "#0000FF");
+				});
+
+				// 层级选择器（选择器1 选择器2 选择器n）
+				$("#btnn5").click(function() {
+					$("#two,.mini").css("background-color", "red")
+				});
+
+			});
+		</script>
+
+	</head>
+
+	<body>
+		<input type="button" id="btnn1" value="选择为one的元素" />
+		<input type="button" id="btnn2" value="选择样式为mini的元素" />
+		<input type="button" id="btnn3" value="选择所有的div元素" />
+		<input type="button" id="btnn4" value="选择所有元素" />
+		<input type="button" id="btnn5" value="选择id为two和样式为mini的元素" />
+		<hr/>
+		<div id="one">
+			<div class="mini">
+				111
+			</div>
+		</div>
+
+		<div id="two">
+			<div class="mini">
+				222
+			</div>
+			<div class="mini">
+				333
+			</div>
+		</div>
+
+		<div id="three">
+			<div class="mini">
+				444
+			</div>
+			<div class="mini">
+				555
+			</div>
+			<div class="mini">
+				666
+			</div>
+		</div>
+
+		<span id="four">
+			
+		</span>
+	</body>
+
+</html>

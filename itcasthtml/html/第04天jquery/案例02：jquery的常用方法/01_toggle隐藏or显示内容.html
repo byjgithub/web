@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>toggle隐藏or显示内容</title>
+		<script type="text/javascript" src="../../../js/jquery-1.8.3.js"></script>
+		<style type="text/css">
+			#img4 {
+				width: 500px;
+				height: 550px;
+			}
+			
+			#btn4 {
+				font-size: 25px;
+			}
+			
+			#div5 {
+				margin: 20px;
+			}
+		</style>
+
+		<!-- 使用jquery实现display的显示和隐藏效果 -->
+		<script>
+			// 声明函数
+			$(function() {
+				// 动态绑定事件
+				$("#btn4").click(function() {
+					// 对图片绑定toggle()效果，toggle()是display的显示和隐藏效果
+					$("#img4").toggle();
+				});
+			});
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="div4" align="center">
+			<input type="button" id="btn4" value="显示/隐藏" />
+
+			<div id="div5">
+				<img src="../../../img/乄小呆/乄小呆  (11).jpg" id="img4" />
+
+			</div>
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<!--
+	思路分析：
+		1.确定事件（onload页面加载事件）,并为其绑定一个函数。
+		2.书写函数，获取元素（document.getElementById()）,最终是为了获取表格中tbody标签里边的行数(长度)
+		3.获取表格里边的行数，tbody里边的行数（rows.length）
+		4.遍历循环(for循环)，获取奇偶行
+		5.分别对奇数行和偶数行设置背景色(对象.style.backgroundcolor)
+-->
+
+	<head>
+		<meta charset="UTF-8">
+		<title>隔行换色</title>
+		<script type="text/javascript">
+			// 1.确定事件
+			window.onload = function() {
+				//2. 获取tbody里边的行数
+				var tbEle = document.getElementById("tbl"); //table对象
+				var len = tbEle.tBodies[0].rows.length; //获取tbody的行数
+				// 3.遍历行数
+				for(var i = 0; i < len; i++) {
+					if(i % 2 == 0) {
+						// 对偶数行设置背景颜色
+						tbEle.tBodies[0].rows[i].style.backgroundColor = "pink";
+					} else {
+						// 对奇数行设置背景色
+						tbEle.tBodies[0].rows[i].style.backgroundColor = "gold";
+					}
+				}
+
+			}
+		</script>
+	</head>
+
+	<body>
+		<table border="1" width="500" height="50" align="center" id="tbl">
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>姓名</th>
+					<th>年龄</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>张三</td>
+					<td>22</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>李四</td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>王五</td>
+					<td>27</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>赵六</td>
+					<td>29</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>田七</td>
+					<td>30</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>汾九</td>
+					<td>20</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+</html>

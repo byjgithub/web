@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<!--
+	setInterval(method,time)的使用：	
+		method：每隔一段时间就执行一次的函数或代码段
+		time：间隔时间，毫秒
+	setInterval()的书写格式：
+		方式一：method 函数放在双引号中，这种格式需要方法名带小括号，例如：setInterval("clock()",1000);
+		方式二：method 不放在双引号中，这种格式不需要写小括号，例如：setInterval(clock,1000);
+-->
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JS定时器</title>
+		<script type="text/javascript">
+			// 时钟
+			function clock() {
+				var week = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]; //星期数组
+				var time = new Date(); // 获取时间对象
+				var year = time.getFullYear(); //年
+				var month = time.getMonth() + 1; //月
+				var day = time.getDate(); //日
+				var weekDay = week[time.getDay()]; //星期几
+				var hours = time.getHours(); //时
+				var minutes = time.getMinutes(); //分
+				var seconds = time.getSeconds(); //秒
+				if(seconds < 10) {
+					seconds = "0" + seconds;
+				}
+				if(minutes < 10) {
+					minutes = "0" + minutes;
+				}
+				if(day < 10) {
+					day = "0" + day;
+				}
+				if(month < 10) {
+					month = "0" + month;
+				}
+				var timere = year + "年" + month + "月" + day + "日  " + hours + ":" + minutes + ":" + seconds + "  " + weekDay;
+				document.getElementById("clock").innerHTML = timere;
+
+			}
+
+			// 计时器
+			function add() {
+				var count = setInterval(clock, 1000);
+				count.clearInterval();
+			}
+		</script>
+	</head>
+
+	<body onload="add()">
+
+		<table width="400px" onload="clock()">
+			<tr>
+				<td align="right">现在时间：</td>
+				<td align="left">
+					<span id="clock">
+
+					</span>
+				</td>
+			</tr>
+		</table>
+
+	</body>
+
+</html>

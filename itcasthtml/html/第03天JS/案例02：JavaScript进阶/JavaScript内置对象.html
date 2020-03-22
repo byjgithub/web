@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript内置对象</title>
+		<!-- Date时间对象案例1:访问/设置年份 -->
+		<script type="text/javascript">
+			var date = new Date(); //创建时间对象
+			document.write("时间对象：" + date + "<br>"); //输出时间对象
+			date.setFullYear(2019, 10, 5); //设置年月日
+			//date.setMonth(11); //设置月份
+			document.write("时间对象：" + date.getFullYear() + date.getMonth() + "<br>");
+		</script>
+
+		<!-- Date时间对象案例2：访问/设置星期 -->
+		<script type="text/javascript">
+			var date = new Date();
+			var day = date.getDay();
+			document.write("getDay()的返回值：" + day + "<br>");
+			var week = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+			document.write("今天是星期几？" + week[day] + "<br>");
+		</script>
+		<br />
+		<br />
+		<!-- Date时间对象案例3：使用Date对象表示时钟 -->
+		<script type="text/javascript">
+			function startTime() {
+				var date = new Date(); //获取时间对象
+				var year = date.getFullYear(); //年
+				var month = checkTime(date.getMonth() + 1); //月
+				var day = checkTime(date.getDate()); //日
+				var hourse = date.getHours(); //时
+				var minutes = checkTime(date.getMinutes()); //分
+				var seconds = checkTime(date.getSeconds()); //秒
+				var week = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+				var weekDay = week[date.getDay()]; //星期
+
+				// 向HTML页面输出时间
+				document.getElementById("txt3").innerHTML = year + "-" + month + "-" + day + "-  " + hourse + ":" + minutes + ":" + seconds + "    " + weekDay;
+				t = setTimeout('startTime()', 500);
+			}
+
+			// 如果传入的参数小于10，则在参数前多输出一个0
+			function checkTime(i) {
+				if(i < 10) {
+					i = "0" + 1;
+				}
+				return i;
+			}
+		</script>
+
+		<!-- String 字符串 -->
+		<script type="text/javascript">
+			var string = "jintinatainqizhenhao";
+			// 将字符串转换成大写
+			document.write("将字符串转换成大写：" + string.toUpperCase() + "<br/>");
+			document.write("将字符串转换成小写：" + string.toLowerCase() + "<br />");
+			document.write("查找坐标6位置上的字符串是：：" + string.charAt(6) + "<br />");
+			document.write("查找字符串qizhe第一次出现的坐标：" + string.indexOf("qizhe") + "<br />")
+			// 分割字符串
+			var arr = string.split("a");
+			document.write("分割后的字符串：")
+			var i = 0;
+			while(i < arr.length) {
+				document.write(arr[i] + " ");
+				i++;
+			}
+			document.write("<br />")
+
+			document.write("截取下标3-6的字符串：" + string.substring(3, 7) + "<br />");
+			document.write("截取字符串，从下标2开始，5个长度的字符串：" + string.substr(2, 5) + "<br />");
+		</script>
+
+	</head>
+
+	<body onload="startTime()">
+		<div id="txt3"></div>
+
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+
+	</body>
+
+</html>

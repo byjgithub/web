@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>文档对象模型</title>
+	</head>
+	<!--
+一、认识DOM文档对象模型
+	文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。
+	DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。
+	1、HTML文档可以说由节点构成的集合，三种常见的DOM节点:
+		1.元素节点：<html> <head> <body> <p> <ul>...等等，都是元素节点（标签就是元素节点）
+		2.属性节点：如<a>标签的链接属性 href="https://www.imooc.com"
+		3.文本节点：向用户展示的内容，如<li>...</li>中的js、Dom、css等文本。
+
+	2、三种节点区分案例
+		例如：	<a href="http://www.imooc.com">JavaScript DOM</a>
+		1. 标签a：是元素节点
+		2.属性 href 是属性节点
+		3.JavaScript DOM 是文本节点
+
+二、通过id获取元素
+	1、在html中，id是唯一的，我们可以通过id找到标签，然后进行操作。
+		1.语法：document.getElementById("id");
+	2、获取的元素是一个对象，如果想对元素进行操作，我们要通过它的属性或方法。
+		例如：
+			var con = document.getElementById("id");
+			alert("结果是："+con);
+			输出结果是：结果是:null或[object HTMLParagraphElement]
+
+三、innerHTML属性
+	1、innerHTML 属性用于获取或替换HTML元素的内容
+	2、语法格式：
+		对象.innerHTML("替换的内容");
+	3、注意：innerHTML区分大小写
+	4、示例：
+		var con = document.getElementById("id");
+		con.innerHTML("修改HTML页面的内容");
+
+四、改变HTML的样式
+	1、语法：
+		对象.style.property = new style;
+	2、参数说明
+		1.property：属性，比如字体、颜色、背景等
+		2.new style：新的属性值
+	3、示例：
+		var con = document.getElementById("id");
+		con.style.color = "red";	//将颜色改为红色
+		con.style.width = 400px;	//将宽度改为400px
+
+五、display显示和隐藏
+	1、网页中经常看到显示和隐藏的效果，可以通过display来实现
+	2、语法格式：
+		对象.style.display = value;
+	3、参数说明
+		1.value：display属性的值，该值有两个可选
+			(1)none：此元素不会被显示(即隐藏)
+			(2)block：此元素将显示为块级元素(即显示)
+六、编程挑战
+	需求：
+		1.定义"改变颜色"的函数
+		2.定义"改变宽高"的函数
+		3.定义"隐藏内容"的函数
+		4.定义"显示内容"的函数
+		5.定义"取消设置"的函数
+-->
+
+	<body>
+		<h2 id="con">JavaScript课程</H2>
+		<div id="txt">
+			<h5>JavaScript为网页添加动态效果并实现与用户交互的功能。</h5>
+			<p>1. JavaScript入门篇，让不懂JS的你，快速了解JS。</p>
+			<p>2. JavaScript进阶篇，让你掌握JS的基础语法、函数、数组、事件、内置对象、BOM浏览器、DOM操作。</p>
+			<p>3. 学完以上两门基础课后，在深入学习JavaScript的变量作用域、事件、对象、运动、cookie、正则表达式、ajax等课程。</p>
+		</div>
+		<form>
+			<!--当点击相应按钮，执行相应操作，为按钮添加相应事件-->
+			<input type="button" value="改变颜色" onclick="alterColor()">
+			<input type="button" value="改变宽高" onclick="alterVolume()">
+			<input type="button" value="隐藏内容" onclick="hideContent()">
+			<input type="button" value="显示内容" onclick="showContent()">
+			<input type="button" value="取消设置" onclick="offSet()">
+		</form>
+		<script type="text/javascript">
+			var txt = document.getElementById("txt");
+			//定义"改变颜色"的函数
+			function alterColor() {
+				txt.style.color = "red";
+			}
+			//定义"改变宽高"的函数
+			function alterVolume() {
+				txt.style.width = "1000px";
+				txt.style.height = "200px";
+			}
+			//定义"隐藏内容"的函数
+			function hideContent() {
+				txt.style.display = "none";
+			}
+			//定义"显示内容"的函数
+			function showContent() {
+				txt.style.display = "block";
+			}
+			//定义"取消设置"的函数
+			function offSet() {
+				var option = confirm("是否确认取消设置？");
+				if(option == true) {
+					txt.removeAttribute("style");
+				} else {
+					alert("您已放弃恢复默认设置");
+				}
+			}
+		</script>
+	</body>
+
+</html>

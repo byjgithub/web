@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<!--
+一、JavaScript事件
+	1、JavaScript主要事件
+			事件					说明
+		1.onclick				鼠标单击事件
+		2.onmouseover			鼠标经过事件
+		3.onchange				文本框内容改变事件
+		4.onselect				文本框被选中事件
+		5.onfocus				光标聚集事件
+		6.onblur				光标离开
+		7.onload				网页导入
+		8.onunload				关闭网页
+	
+	2、事件实战练习
+		1.需求：
+			使用JS完成一个简单的计算器功能。实现2个输入框中输入整数后，点击第三个输入框能给出2个整数的加减乘除。
+		2.提示：
+			获取元素的值：var element = document.getElementById("id").value;
+			设置元素的值：document.getElementById("id").value = 1;
+	
+	
+	
+-->
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript事件响应，让网页交互</title>
+		<script>
+			function count() {
+				var txt1 = document.getElementById("txt1").value;
+				var select = document.getElementById("select").value;
+				var txt2 = document.getElementById("txt2").value;
+				var result;
+				switch(select) {
+					case "+":
+						result = parseInt(txt1) + parseInt(txt2);
+						document.getElementById("fruit").value = result; //赋值
+						break;
+					case "-":
+						result = txt1 - txt2;
+						document.getElementById("fruit").value = result; //赋值
+						break;
+					case "*":
+						result = txt1 * txt2;
+						document.getElementById("fruit").value = result; //赋值
+						break;
+					case "/":
+						result = txt1 / txt2;
+						document.getElementById("fruit").value = result; //赋值
+						break;
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<input type='text' id='txt1' />
+		<select id='select'>
+			<option value='+'>+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<input type='text' id='txt2' />
+		<input type='button' value=' = ' onclick="count()" />
+		<!--通过 = 按钮来调用创建的函数，得到结果-->
+		<input type='text' id='fruit' />
+	</body>
+
+</html>

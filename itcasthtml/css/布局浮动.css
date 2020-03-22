@@ -1,0 +1,17 @@
+div {
+	border: 1px solid green;
+	width: 100px;
+	height: 80px;
+}
+
+#float1 {
+	float: left;
+}
+
+#float2 {
+	float: left;
+}
+
+#float3 {
+	float: left;
+}

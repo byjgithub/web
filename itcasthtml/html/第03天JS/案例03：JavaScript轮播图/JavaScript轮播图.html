@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>定时轮播图</title>
+
+		<style type="text/css">
+			div {
+				border: 1px solid white;
+				width: 500px;
+				height: 350px;
+				margin: auto;
+				text-align: center;
+			}
+		</style>
+
+		<script type="text/javascript">
+			var i = 1;
+
+			function changeImg() {
+				if(i == 0) {
+					document.getElementById("img1").src = "../../../img/乄小呆/乄小呆  (0).png";
+				} else {
+					document.getElementById("img1").src = "../../../img/乄小呆/乄小呆  (" + parseInt(i) + ").jpg";
+				}
+				document.getElementById("count").value = "第" + (parseInt(i) + 1) + "张";
+				i++;
+				if(i == 41) {
+					i = 0;
+				}
+			}
+
+			function init() {
+				setInterval(changeImg, 366); //定时循环调用changeImg()方法	
+			}
+		</script>
+	</head>
+
+	<body onload="init()">
+
+		<div align="center">
+			<img id="img1" src="../../../img/乄小呆/乄小呆  (0).png" width="500px" height="500px" />
+			<br />
+			<input id="count" type="button" value="第1张" onclick="changeImg()" />
+			<input type="button" value="下一张" onclick="changeImg()" />
+		</div>
+
+	</body>
+
+</html>

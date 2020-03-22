@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>window窗口对象</title>
+
+		<!-- setInterval()循环计时器 -->
+		<script type="text/javascript">
+			var attime;
+
+			function clock() {
+				var time = new Date();
+				attime = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+				document.getElementById("clock").value = attime;
+			}
+			setInterval(clock,100);
+		</script>
+
+	</head>
+
+	<body>
+
+		<input id="clock" type="text" />
+
+	</body>
+
+</html>

@@ -1,0 +1,42 @@
+#father{
+	width: 1335px;
+	height: 2170px;
+	border: 1px solid red;
+	margin: auto;
+}
+.top{
+	width: 440px;
+	height: 70px;
+	float: left;
+	border: 1px solid blue;
+}
+#top{
+	/* 盒子的高度 = 内边距高度 + 元素高度 */
+	padding-top: 10px;
+	height: 60px;
+}
+
+#homepage{
+	font-size: 25px;
+	padding-left:40px ;
+}
+#clear{
+	clear: both;
+}
+#menu{
+	background-color:black ;
+	width: 1335px;
+	height: 55px;
+	border: 1px solid red;
+
+}
+
+ul li{
+	display: inline;
+	color: white;
+}
+
+
+
+
+

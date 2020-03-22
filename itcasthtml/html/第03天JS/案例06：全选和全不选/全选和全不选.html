@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<!--
+	获取表格行数：
+		document.getElementById("table").rows.length;
+	获取表格中某一格的内容：
+		document.getElementById("table").rows[i].childNodes[j].innerHTML
+-->
+
+	<head>
+		<meta charset="UTF-8">
+		<title>全选和全不选，添加和删除子节点</title>
+		<!-- 全选和全不选 -->
+		<script type="text/javascript">
+			// 方式一
+			function checkAll() {
+				var checkAllEle = document.getElementById("checkAll"); //获取全选按钮对象
+				var checkOnes = document.getElementsByName("checkOne"); //获取复选框的集合
+				// 对全选按钮进行判断，如果为true则全选，false则全不选
+				if(checkAllEle.checked == true) {
+					// 遍历复选框集合并选中
+					for(var i = 0; i < checkOnes.length; i++) {
+						//选中复选框
+						checkOnes[i].checked = true;
+					}
+				} else {
+					for(var i = 0; i < checkOnes.length; i++) {
+						checkOnes[i].checked = false;
+					}
+				}
+			}
+
+			// 方式二
+			function checkAll2() {
+				var checkAllEle = document.getElementById("checkAll"); //获取全选按钮对象
+				var checkOnes = document.getElementsByName("checkOne"); //获取复选框的集合
+				var flag = false; //标识符默认true
+				// 对全选按钮进行判断，如果为true则全选，false则全不选
+				checkAllEle.checked == true ? (flag = true) : (flag = false);
+				for(var i = 0; i < checkOnes.length; i++) {
+					//选中复选框
+					checkOnes[i].checked = flag;
+				}
+			}
+		</script>
+
+		<script>
+			function add() {
+
+				var table = document.getElementById("table1"); //获取 table 节点
+				var createTr = document.createElement("tr"); //创建tr节点
+				var len = table.rows[2].getElementsByTagName("td").length;
+				var endRow = table.rows.length-1;//最后一行角标
+				for(var i = 0; i < len; i++) {
+					var createTd = document.createElement("td"); //创建td节点
+					var createInput = document.createElement("input"); //创建input节点
+					if(i == 0) {
+						createInput.setAttribute("type", "checkbox");
+						createInput.setAttribute("name", "checkOne");
+					} else {
+						createInput.setAttribute("type", "text");
+						if(i == 1) {
+							createInput.setAttribute("value",(parseInt(endRow)));
+						}
+					}
+					createTd.appendChild(createInput); //将input节点加入td节点中
+					createTr.appendChild(createTd);
+				}
+				table.appendChild(createTr);
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<table border="1" width="500" height="50" align="center" id="table1">
+			<thead>
+				<tr>
+					<td colspan="4">
+						<input type="button" value="添加" id="addChildNode" onclick="add()" />
+						<input type="button" value="删除" id="removeChildNode" />
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" onclick="checkAll2()" id="checkAll" /></td>
+					<th>编号</th>
+					<th>姓名</th>
+					<th>年龄</th>
+				</tr>
+			</thead>
+			<tbody id="tbody1">
+				<tr id="tr1">
+					<td><input type="checkbox" name="checkOne" /></td>
+					<td>1</td>
+					<td>张三</td>
+					<td>22</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="checkOne" /></td>
+					<td>2</td>
+					<td>李四</td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="checkOne" /></td>
+					<td>3</td>
+					<td>王五</td>
+					<td>27</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="checkOne" /></td>
+					<td>4</td>
+					<td>赵六</td>
+					<td>29</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="checkOne" /></td>
+					<td>5</td>
+					<td>田七</td>
+					<td>30</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="checkOne" /></td>
+					<td>6</td>
+					<td>汾九</td>
+					<td>20</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+</html>

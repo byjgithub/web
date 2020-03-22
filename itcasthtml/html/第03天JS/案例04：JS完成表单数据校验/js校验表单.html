@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>js校验表单</title>
+		<script type="text/javascript">
+			// 聚焦提示信息
+			function showTips(id, info) {
+				document.getElementById(id + "span").innerHTML = "<font color='gray'>" + info + "</font>"
+			}
+			// 校验用户数据
+			function check(id, info) {
+				var uVlue = document.getElementById(id).value; //获取用户数据
+				if(uVlue == "") {
+					document.getElementById(id + "span").innerHTML = info;
+				} else {
+					document.getElementById(id + "span").innerHTML = "";
+				}
+			}
+
+			// 校验两次密码是否一致
+			function checkRePassword() {
+				var password = document.getElementById("password").value;
+				var repassword = document.getElementById("repassword").value;
+				if(password != "" && password == repassword) {
+					document.getElementById("repasswordspan").innerHTML = "<font color='green'>" + "两次输入的密码相同" + "</font>";
+				} else {
+					document.getElementById("repasswordspan").innerHTML = "<font color='red'>" + "两次输入的密码不一致，请重新输入！！！" + "</font>";
+				}
+			}
+
+			// 校验邮箱
+			function checkEmail(id) {
+				var email = document.getElementById(id).value; //邮箱数据
+				if(email == "") {
+					document.getElementById(id + "span").innerHTML = "<font color='red'>" + "邮箱不能为空！！！" + "</font>";
+				} else {
+					// 校验邮箱格式
+					if(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(email)) {
+						document.getElementById(id + "span").innerHTML = ""; //正确不输出信息
+					} else {
+						document.getElementById(id + "span").innerHTML = "<font color='red'>" + "邮箱格式不正确，请检查后重新输入" + "</font>";
+					}
+
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<!--3.注册表单-->
+		<tr>
+			<td height="600px" background="../../../img/regist_bg.jpg">
+				<!--嵌套一个十行二列的表格-->
+				<form action="#" method="get" name="regForm" onsubmit="return checkForm()">
+					<table border="1px" width="750px" height="400px" align="center" cellpadding="0px" cellspacing="0px" bgcolor="white">
+						<tr height="40px">
+							<td colspan="2">
+								<font size="4">会员注册</font> &nbsp;&nbsp;&nbsp;USER REGISTER
+							</td>
+						</tr>
+						<tr>
+
+							<td>用户名</td>
+							<td>
+								<!-- 必填标志 -->
+								<span style="color: red;">* </span>
+								<input type="text" name="user" size="34px" id="user" onfocus="showTips('user','请输入用户名，此为必填项')" onblur="check('user','用户名不能为空！')" />
+								<!-- span 是用来实处错误信息的  -->
+								<span id="userspan" style="color: red;"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>密码</td>
+							<td>
+								<span style="color: red;">* </span>
+								<input type="password" name="password" size="34px" id="password" onfocus="showTips('password','请输入密码，此为必填项')" onblur="check('password','密码不能为空！')" />
+								<span id="passwordspan" style="color: red;"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>确认密码</td>
+							<td>
+								<span style="color: red;">* </span>
+								<input type="password" name="repassword" size="34px" id="repassword" onfocus="showTips('repassword','请再次输入密码')" onblur="checkRePassword()" />
+								<span id="repasswordspan"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>Emaile</td>
+							<td>
+								<span style="color: red;">* </span>
+								<input type="text" name="email" size="34px" id="email" onfocus="showTips('email','请输入邮箱,此为必填项')" onblur="checkEmail('email')" />
+								<span id="emailspan"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>姓名</td>
+							<td>
+								<span style="color: red;">&nbsp;&nbsp;</span>
+								<input type="text" name="username" size="34px" />
+							</td>
+						</tr>
+						<tr>
+							<td>性别</td>
+							<td>
+								<span style="color: red;">&nbsp;&nbsp;</span>
+								<input type="radio" name="sex" value="男" />男
+								<input type="radio" name="sex" value="女" />女
+							</td>
+						</tr>
+						<tr>
+							<td>出生日期</td>
+							<td>
+								<span style="color: red;">&nbsp;&nbsp;</span>
+								<input type="text" name="birthday" size="34px" />
+							</td>
+						</tr>
+						<tr>
+							<td>验证码</td>
+							<td>
+								<span style="color: red;">* </span>
+								<input type="text" name="yzm" />
+								<img src="../../../img/yanzhengma.png" />
+
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input type="submit" value="注册" />
+							</td>
+						</tr>
+					</table>
+				</form>
+			</td>
+		</tr>
+
+	</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>表单</title>
+		<link rel="stylesheet" href="../../../css/选择器css.css" />
+	</head>
+
+	<body>
+		<!--
+			<form> 表单标签：
+				action：数据提交到服务器的地址
+				method：提交方式 get、post
+					get：默认值，提交的数据追加在路径上，追加使用？连接，之后每一对数据使用&连接，以 key=value的方式显示在地址栏上。
+						因为请求路径有长度限制，所以get提交的数据有限。
+					post：隐式提交，提交的数据不再追加到路径上（不显示在地址栏上），提交的数据大小不显示。
+			
+			<input> 输入域标签：用于获取用户输入的信息，type属性值不同，收集方式不同
+				type属性：
+					text：文本框
+					password：密码框
+					radio：单选框
+					checkbook：复选框
+					file：文件上传组件
+					hidden：隐藏字段，数据会发送给服务器，但是浏览器不会显示
+					reset：重置
+					image：图形提交按钮
+					button：普通按钮
+				name属性：元素名
+				value属性：设置input标签的默认值，submit和reset为按钮显示数据
+				size属性：大小
+				email属性：邮箱
+				checked属性：单选框或复选框被默认选中
+				readonly属性：是否只读
+				disabled属性：是否可用
+				maxlength属性：允许输入的最大长度
+				
+			<select> 下拉列表标签：可进行单选或多选，需要使用子标签<option>指定列表项
+				name属性：发送给服务器的名称
+				multiple属性：不写默认单选，取值"multiple"示多选
+				size属性:多选时，可见选项的数目。
+				
+			<option> 子标签：下拉列表的一个选项
+				selected属性：勾选当前列表项
+				value：发送给服务器的值。
+			
+			<textarea>:文本域，多行的文本输入控件
+				cols：文本域的列数
+				rows：文本域的行数
+			<button type="button|reset|submit"> 按钮标签。	
+		-->
+
+		<form action="">
+			<table border="0" cellpadding="7" cellspacing="7">
+				<tr>
+					<td align="right">会员注册</td>
+					<td colspan="2">USER REGISTER</td>
+				</tr>
+				<tr>
+					<td align="right">用户名</td>
+					<td colspan="2">
+						<input type="text" name="username" value="请输入用户名" size="60" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">密码</td>
+					<td colspan="2">
+						<input type="password" name="password" value="请输入密码" size="60" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">确认密码</td>
+					<td colspan="2">
+						<input type="password" name="password" value="请输入确认密码" size="60" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">email</td>
+					<td colspan="2">
+						<input type="email" name="email" value="email" size="60" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">姓名</td>
+					<td colspan="2" width="">
+						<input type="text" name="name" value="请输入姓名" size="60" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">性别</td>
+					<td colspan="2">
+						<input type="radio" name="gender" checked="checked" />男 &nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="radio" name="gender" />女
+					</td>
+				</tr>
+				<tr>
+					<td align="right">出生日期</td>
+					<td colspan="2">
+						<input type="text" name="birthday" size="60" value="    -年  -月  -日" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">验证码</td>
+					<td>
+						<input type="text" name="verifyCode" size="30" />
+					</td>
+					<td width="200">
+						<img src="../../../img/yanzhengma.png" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" name="submit" value="注册" />
+					</td>
+					<td align="left">
+						<input type="reset" value="重置" name="reset" />
+					</td>
+				</tr>
+
+			</table>
+		</form>
+
+	</body>
+
+</html>

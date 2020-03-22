@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript进阶</title>
+	</head>
+	<!--
+
+一、数组
+	1、数组是值的集合，可以根据需求向数组增加 更多的值。（有些像java中的集合）
+	2、创建数组
+		1.方式一：创建空数组
+			var arrs = new Array();
+		2.方式二：创建带指定长度的数组
+			var arrs = new Array(8);
+		3.注意：
+			1.创建的新数组是空数组，没有值，如果输出，结果为undefined。
+			2.即使创建带指定长度的数组，但是数组的长度是可以根据需求变的。就是说可以存储指定长度之外数量的值。
+	3、给数组赋值
+		1.给空数组赋值
+			var arrs = new Array();
+			arrs[0]="小白";
+			arrs[1]="小呆";
+		2.创建数组的同时赋值
+			var arrs = new Array(2,3,4,5);
+		3.直接输出一个数组
+			var arrs = [1,2,3,4];
+		4.注意：
+			数组可以存储任意类型的数据（字符、数组、布尔等）。
+			即使是一个数组，也可以同时存储不同类型的数据。
+	
+	4、数组的长度length
+		1.同 Java一样，数组的下标是从0开始的。索引值范围是[0,length-1];
+		2.增大数组长度的方式
+			(1)方式一：为数组长度赋更大的值
+				var arr = new Array(8);//数组长度是8
+				arr.length= 10;	//此时数组长度是10
+			(2)方式二：直接向数组中添加数据，当值的数量超过原来数组的长度时，数组的长度自动改变
+				var arr = new Array(8);//数组长度是8
+				arr[11] = "33";	// 此时数组的长度变为12（11+1）
+	5、二维数组
+		1.JavaScript的二维数组同java的二维数组一样
+		2.创建方式
+			(1)方式一：先创建一维数组，再创建二维数组。
+				var myarr=new Array();  //先声明一维 
+				for(var i=0;i<2;i++){   //一维长度为2
+		   			myarr[i]=new Array();  //再声明二维 
+		   			for(var j=0;j<3;j++){   //二维长度为3
+		   				myarr[i][j]=i+j;   // 赋值，每个数组元素的值为i+j
+		   			}
+				}
+			(2)直接定义二维数组
+				var arrs = [[0,1,2],[3,4,5]];
+		3、对二维数组赋值
+			arrs[0][1]=5;//将5传入到数组中，覆盖原来位置的值
+			
+
+
+
+二、流程控制语句
+	1、if判断语句
+		1.语法
+			if(条件){ 
+				条件成立时执行代码
+			}else{
+				条件不成立时执行代码
+			}
+	2、switch语句
+		与java 的switch相同。
+	
+	3、for循环、while循环、do...while(条件)循环
+	
+	4、break 跳出循环语句、continue 终止本次循环，进入下次循环
+	
+
+三、函数
+	1、函数的语法格式
+		function 函数名(参数){
+			函数体
+		}
+	2、参数说明
+		函数的参数可有可无，可以有1个，也可以有多个。
+	3、函数的调用
+		1.方式一：直接调用
+			<script type="text/javascript">
+				function add2(){
+					sum = 1 + 1;
+					alert(sum);
+				}
+				add2();//调用函数，直接写函数名。
+			</SCRIPT>
+		2.方式二：在HTML中触发式调用
+			<html>
+				<head>
+					<script type="text/javascript">
+	   					function add2(){
+					         sum = 5 + 6;
+					         alert(sum);
+	   					}
+					</script>
+				</head>
+				<body>
+					<form>
+						//按钮,onclick点击事件，直接写函数名
+						<input type="button" value="click it" onclick="add2()">  
+					</form>
+				</body>
+			</html>
+	
+	4、带返回值的函数
+		1.语法：
+			function add(x,y){
+				var x,y,sum;
+				sum = x+y;
+				return sum;//sum就是返回值
+			}
+		2.函数值处理
+			(1)在输出语句中直接返回
+				document.wrie(add(2,3));
+			(2)用一个变量接收
+				var result = add(2,3);
+	5、编程实战
+		需求：使用javascript代码写出一个函数：实现传入两个整数后弹出较大的整数
+
+-->
+
+	<body>
+		<script type="text/javascript">
+			//第一步把之前的数据写成一个数组的形式,定义变量为 
+			var infos = [
+				["小A", "女", 21, "大一"],
+				["小B", "男", 23, "大三"],
+				["小C", "男", 24, "大四"],
+				["小D", "女", 21, "大一"],
+				["小E", "女", 22, "大四"],
+				["小F", "男", 21, "大一"],
+				["小G", "女", 22, "大二"],
+				["小H", "女", 20, "大三"],
+				["小I", "女", 20, "大一"],
+				["小J", "男", 20, "大三"]
+			];
+
+			//第一次筛选，找出都是大一的信息
+			for(var i = 0; i < infos.length; i++) {
+				if("大一" == infos[i][3]) {
+					//第二次筛选，找出都是女生的信息
+					if("女" == infos[i][1]) {
+						document.write(infos[i]);
+						document.write("<br/>");
+					}
+				}
+			}
+			document.write("<br/>");
+			document.write("<br/>");
+			document.write("<br/>");
+			document.write("<br/>");
+		</script>
+
+		<!--使用javascript代码写出一个函数：实现传入两个整数后弹出较大的整数-->
+		<script>
+			function compare(x, y) {
+				if(x > y) {
+					alert("比较大的数值是：" + x);
+				} else if(x < y) {
+					alert("比较大的数值是：" + y);
+				} else {
+					alert("两个数相等");
+				}
+			}
+
+			var x = prompt("请输入第一个值：");
+			if(x != null) {
+				var y = prompt("请输入第二个值：");
+				if(y != null) {
+					compare(x, y);
+				}
+			}
+		</script>
+
+	</body>
+
+</html>

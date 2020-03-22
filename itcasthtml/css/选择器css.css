@@ -1,0 +1,39 @@
+/* 标记选择器 （元素选择器）*/
+p {
+	size: 15px;
+	color: blueviolet;
+}
+
+
+/* id选择器 */
+#idname {
+	size: 20px;
+	color: red;
+}
+
+
+/* 类选择器 */
+.classname {
+	size: 25px;
+	color: #0000FF;
+}
+
+
+/* 层级选择器 (包含选择器)*/
+div #idgrouop1 .div1 {
+	size: 30px;
+	color: green;
+}
+
+
+/* 属性选择器 */
+input[type="text"]{
+	color: aqua;
+	border-color: #008000;
+}
+
+
+
+
+
+
