@@ -15,9 +15,9 @@
 </head>
 <body>
 <form action="/JSP/AddOperaServlet" method="post">
-    第1个加数：<input type="text" value="请输入第1个加数" name="addend"><br>
-    第2个加数：<input type="text" value="请输入第2个加数" name="addend"><br>
-    <input type="submit" value="=">
+    第1个加数：<input type="text"  name="addend"><br>
+    第2个加数：<input type="text"  name="addend"><br>
+    <input type="submit" value="="><br>
     运算结果：<%=result %>
 </form>
 </body>

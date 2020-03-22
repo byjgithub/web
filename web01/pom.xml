@@ -10,6 +10,7 @@
     <modules>
         <module>request</module>
         <module>JSP</module>
+        <module>cookie1</module>
     </modules>
     <packaging>pom</packaging>
 

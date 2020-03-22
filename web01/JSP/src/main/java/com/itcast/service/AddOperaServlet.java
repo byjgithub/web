@@ -36,7 +36,7 @@ public class AddOperaServlet extends HttpServlet {
         // 将处理结果放入 request域中
         request.setAttribute("result", sum);
         // 将结果转发至结果显示页面
-        request.getRequestDispatcher("/jsp/addOperation.jsp");
+        request.getRequestDispatcher("/jsp/addOperation.jsp").forward(request,response);
     }
 
     @Override

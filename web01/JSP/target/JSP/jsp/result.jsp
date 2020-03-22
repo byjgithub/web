@@ -9,9 +9,11 @@
 <html>
 <head>
     <title>运算结果</title>
-
+    <%
+        Integer result = (Integer) request.getAttribute("result");
+    %>
 </head>
 <body>
-加法运算结果是：<%=result %>
+结果是：<%=result %>
 </body>
 </html>
